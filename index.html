@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CRUD Google Sheet Multiple Sheet Entry - Sheet2</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sheet 2</title>
+</head>
+
+<body>
+<script  data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   
+<div class="container mt-5 mb-5">
+  <h3><a href="https://codepen.io/cpabhi/pen/zYGRNVG" target="_blank">Back to Sheet 1</a></h3>
+  <br>
+  
+  <hr>
+  <br>
+  <h3>Create Records</h3>
+  <form id="formCreate" class="row" >
+    <div class="form-group col-6">
+      <label>Phone</label>
+      <input class="form-control" name="phone" type="text" >
+    </div>
+    <div class="form-group col-6">
+      <label>Address</label>
+      <input class="form-control" name="address" type="text" >
+    </div>
+    <div class="col-12">
+      <input type="hidden" name="action" value="create_1">
+      <!--               <input type="hidden" name="SHEET_NAME" value="Sheet1">-->
+      <p id="result"></p>
+      <input type="submit" value="Submit Data" class="btn btn-primary" />
+    </div>
+  </form>
+  <hr/>
+</div>
+<div class="container mt-5 mb-5">
+  <form id="formRetrieve" >
+    <h3>Retrieve Records</h3>
+    <div class="form-group">
+      <input type="hidden" name="action" value="retrieve_1">
+      <input class="btn btn-warning" id="btnRetrieve" type="submit" value="Retrieve" />
+    </div>
+    <div class="row">
+      <div class="form-group col-3">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="table-overflow">
+  <div class="table-responsive">
+    <table id="datatable" class="table table-hover">
+    </table>
+  </div>
+</div>
+<div id="messageRetrieve"></div>
+<div class="container mt-5 mb-5">
+  <hr class="mb-5"/>
+  <form id="formUpdate" >
+    <h3>Update Record</h3>
+    <div class="row">
+      <div class="form-group col-6">
+        <label>TID</label>
+        <input class="form-control" name="tid" type="text" id="tid">
+      </div>    
+      <div class="form-group col-6">
+        <label>Phone</label>
+        <input class="form-control" name="phone" type="text" id="phone">
+      </div>
+      <div class="form-group col-6">
+        <label>Address</label>
+        <input class="form-control" name="address" type="text" id="address" >
+      </div>
+        
+      <div class="form-group col-12">
+        <input type="hidden" name="action" value="update_1">
+        <input class="btn btn-success" type="submit" value="Update" />
+        <p id="messageUpdate"></p>
+      </div>
+    </div>
+  </form>
+  <hr class="mb-5"/>
+  <form id="formDelete" >
+    <h3>Delete Record</h3>
+    <div class="row">
+      <div class="form-group col-6">
+        <label>TID</label>
+        <input class="form-control" name="tid" type="text" id="dtid" disabled="true">
+      </div>
+      <div class="form-group col-6">
+        <label>Phone</label>
+        <input class="form-control" name="phone" type="text" id="dphone" disabled="true">
+      </div>
+      <div class="form-group col-6">
+        <label>Address</label>
+        <input class="form-control" name="address" type="text" id="daddresss" disabled="true">
+      </div>
+        
+      <div class="form-group col-12">
+        <input type="hidden" name="action" value="delete_1">
+        <input class="btn btn-danger" type="submit" value="Delete" />
+        <p id="messageDelete"></p>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
